@@ -12,11 +12,14 @@
   },
   "author": "",
   "bin": {
-    "brain-games": "bin/brain-games.js"
-  }
+    "brain-games": "src/bin/brain-games.js"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Langstone/backend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/Langstone/backend-project-lvl1#readme"
+  "homepage": "https://github.com/Langstone/backend-project-lvl1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
