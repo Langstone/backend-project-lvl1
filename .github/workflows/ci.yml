@@ -13,7 +13,5 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - name: Bla bla bla
-        run: ls -la  
       - name: Run ESLint
         run: make lint
