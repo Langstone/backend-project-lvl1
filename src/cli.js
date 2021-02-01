@@ -2,17 +2,21 @@ const readlineSync = require('readline-sync');
 
 const evenGame = require('./even');
 const calcGame = require('./calc');
+const gcdGame = require('./gcd');
 
 function runGame(name) {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${userName}!`);
+  console.log(`Hello, ${userName}!`);
 
   let game;
   if (name === 'even') {
     game = evenGame;
   } else if (name === 'calc') {
     game = calcGame;
+  } else if (name === 'gcd') {
+    console.log('Find the greatest common divisor of given numbers.');
+    game = gcdGame;
   }
 
   // eslint-disable-next-line no-plusplus
@@ -22,7 +26,7 @@ function runGame(name) {
       process.exit();
     }
   }
-  console.log(`Congratulations ${userName}`);
+  console.log(`Congratulations, ${userName}`);
 }
 
 module.exports = runGame;

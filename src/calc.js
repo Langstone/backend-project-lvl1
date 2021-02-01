@@ -27,14 +27,16 @@ function calcGame(userName) {
       break;
   }
   console.log('What is the result of the expression?');
-  const result = readlineSync.question(`Question: ${numRandom1} ${randomKey} ${numRandom2} `, {
+  const questionResult = readlineSync.question(`Question: ${numRandom1} ${randomKey} ${numRandom2} `, {
     trueValue: [trueResult],
   });
-  console.log(`You answer ${result}`);
-  if (result === true) {
+  let result;
+  if (questionResult === true) {
+    result = trueResult;
+    console.log(`You answer ${result}`);
     console.log('Correct!');
     return true;
   }
-  console.log(`'${result}' is wrong answer ;-(. Correct answer was '${trueResult}'. Let's try again, ${userName}`);
+  console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was '${trueResult}'. Let's try again, ${userName}`);
 }
 module.exports = calcGame;
