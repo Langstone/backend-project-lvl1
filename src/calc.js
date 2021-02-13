@@ -26,7 +26,6 @@ function calcGame(userName) {
       trueResult = numRandom1 / numRandom2;
       break;
   }
-  console.log('What is the result of the expression?');
   const questionResult = readlineSync.question(`Question: ${numRandom1} ${randomKey} ${numRandom2} `, {
     trueValue: [trueResult],
   });

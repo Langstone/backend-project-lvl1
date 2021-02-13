@@ -1,8 +1,6 @@
 const readlineSync = require('readline-sync');
 
 function evenGame(userName) {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
   const numRandom = Math.floor(Math.random() * 11);
 
   const trueAnswer = (num) => {
