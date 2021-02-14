@@ -7,13 +7,11 @@ function progressionGame(userName) {
     const numRandom1 = Math.floor(Math.random() * 5);
     const result = [];
     if (typeof content === 'function') {
-      // eslint-disable-next-line no-plusplus
-      for (let i = numRandom1; result.length < count; i++) {
+      for (let i = numRandom1; result.length < count; i + 1) {
         result.push(content(i));
       }
     } else {
-      // eslint-disable-next-line no-plusplus
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < count; i + 1) {
         result.push(content);
       }
     }
