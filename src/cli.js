@@ -4,6 +4,7 @@ const evenGame = require('./even');
 const calcGame = require('./calc');
 const gcdGame = require('./gcd');
 const progressionGame = require('./progression');
+const primeGame = require('./prime');
 
 function runGame(name) {
   console.log('Welcome to the Brain Games!');
@@ -23,6 +24,9 @@ function runGame(name) {
   } else if (name === 'progression') {
     console.log('What number is missing in the progression?');
     game = progressionGame;
+  } else if (name === 'prime') {
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+    game = primeGame;
   }
 
   // eslint-disable-next-line no-plusplus
