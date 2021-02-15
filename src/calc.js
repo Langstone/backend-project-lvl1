@@ -5,7 +5,7 @@ function calcGame(userName) {
   const numRandom1 = Math.floor(Math.random() * 11);
   const numRandom2 = Math.floor(Math.random() * 11);
 
-  const operations = ['+', '-', 'x', '/'];
+  const operations = ['+', '-', 'x'];
 
   const randomKey = operations[Math.floor(Math.random() * operations.length)];
 
