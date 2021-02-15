@@ -10,7 +10,7 @@ function evenGame(userName) {
     return 'no';
   };
 
-  const numberIsEven = readlineSync.question(`Question ${numRandom} `, {
+  const numberIsEven = readlineSync.question(`Question: ${numRandom} `, {
     trueValue: [trueAnswer(numRandom)],
     falseValue: [!trueAnswer(numRandom)],
   });
@@ -18,7 +18,7 @@ function evenGame(userName) {
     console.log('Correct!');
     return true;
   }
-  console.log(`'${numberIsEven}' is wrong answer ;(. Correct answer was '${trueAnswer(numRandom)}'. Let's try again, ${userName}`);
+  console.log(`'${numberIsEven}' is wrong answer ;(. Correct answer was '${trueAnswer(numRandom)}'. Let's try again, ${userName}!`);
   return false;
 }
 

@@ -36,6 +36,6 @@ function calcGame(userName) {
     console.log('Correct!');
     return true;
   }
-  console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was '${trueResult}'. Let's try again, ${userName}`);
+  console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was '${trueResult}'. Let's try again, ${userName}!`);
 }
 module.exports = calcGame;

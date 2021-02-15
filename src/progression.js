@@ -26,7 +26,7 @@ function progressionGame(userName) {
 
   myArray.splice(changeItem, 1, '..');
 
-  const questionResult = readlineSync.question(`Question ${myArray} `, {
+  const questionResult = readlineSync.question(`Question: ${myArray} `, {
     trueValue: [randomItem],
   });
   let result;

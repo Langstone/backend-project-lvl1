@@ -36,7 +36,7 @@ function runGame(name) {
       process.exit();
     }
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 }
 
 module.exports = runGame;
