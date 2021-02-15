@@ -13,7 +13,7 @@ function primeGame(userName) {
     return 'yes';
   };
 
-  const questionResult = readlineSync.question(`Question ${numRandom} `, {
+  const questionResult = readlineSync.question(`Question: ${numRandom} `, {
     trueValue: [trueAnswer(numRandom)],
   });
   if (questionResult === true) {
