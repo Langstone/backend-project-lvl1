@@ -7,11 +7,13 @@ function progressionGame(userName) {
     const numRandom1 = Math.floor(Math.random() * 5);
     const result = [];
     if (typeof content === 'function') {
-      for (let i = numRandom1; result.length < count; i + 1) {
+      // eslint-disable-next-line no-plusplus
+      for (let i = numRandom1; result.length < count; i++) {
         result.push(content(i));
       }
     } else {
-      for (let i = 0; i < count; i + 1) {
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < count; i++) {
         result.push(content);
       }
     }
@@ -25,8 +27,9 @@ function progressionGame(userName) {
   const changeItem = myArray.indexOf(randomItem);
 
   myArray.splice(changeItem, 1, '..');
+  const myNewArray = myArray.join(' ');
 
-  const questionResult = readlineSync.question(`Question: ${myArray} `, {
+  const questionResult = readlineSync.question(`Question: ${myNewArray} `, {
     trueValue: [randomItem],
   });
   let result;
