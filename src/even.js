@@ -1,4 +1,4 @@
-const readlineSync = require('readline-sync');
+import { question } from 'readline-sync';
 
 function evenGame(userName) {
   const numRandom = Math.floor(Math.random() * 11);
@@ -10,7 +10,7 @@ function evenGame(userName) {
     return 'no';
   };
 
-  const numberIsEven = readlineSync.question(`Question: ${numRandom} `, {
+  const numberIsEven = question(`Question: ${numRandom} `, {
     trueValue: [trueAnswer(numRandom)],
     falseValue: [!trueAnswer(numRandom)],
   });
@@ -22,4 +22,4 @@ function evenGame(userName) {
   return false;
 }
 
-module.exports = evenGame;
+export default evenGame;

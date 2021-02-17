@@ -1,4 +1,4 @@
-const readlineSync = require('readline-sync');
+import { question } from 'readline-sync';
 
 function primeGame(userName) {
   const numRandom = Math.floor(Math.random() * 10);
@@ -13,7 +13,7 @@ function primeGame(userName) {
     return 'yes';
   };
 
-  const questionResult = readlineSync.question(`Question: ${numRandom} `, {
+  const questionResult = question(`Question: ${numRandom} `, {
     trueValue: [trueAnswer(numRandom)],
   });
   if (questionResult === true) {
@@ -27,4 +27,4 @@ function primeGame(userName) {
   return false;
 }
 
-module.exports = primeGame;
+export default primeGame;

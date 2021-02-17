@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const runGame = require('../src/cli');
+import { runGame } from '../src/cli.js';
 
 runGame('progression');

@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-require('../src/cli.js');
+import { runGame } from '../src/cli.js';
+
+runGame('brain');

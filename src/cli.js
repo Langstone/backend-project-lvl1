@@ -1,14 +1,15 @@
-const readlineSync = require('readline-sync');
+import { question } from 'readline-sync';
 
-const evenGame = require('./even');
-const calcGame = require('./calc');
-const gcdGame = require('./gcd');
-const progressionGame = require('./progression');
-const primeGame = require('./prime');
+import evenGame from './even.js';
+import calcGame from './calc.js';
+import gcdGame from './gcd.js';
+import progressionGame from './progression.js';
+import primeGame from './prime.js';
 
-function runGame(name) {
+// eslint-disable-next-line import/prefer-default-export
+export function runGame(name) {
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
+  const userName = question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
   let game;
@@ -27,6 +28,8 @@ function runGame(name) {
   } else if (name === 'prime') {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     game = primeGame;
+  } else if (name === 'brain') {
+    process.exit();
   }
 
   // eslint-disable-next-line no-plusplus
@@ -38,5 +41,3 @@ function runGame(name) {
   }
   console.log(`Congratulations, ${userName}!`);
 }
-
-module.exports = runGame;

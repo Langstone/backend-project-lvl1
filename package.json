@@ -7,8 +7,8 @@
     "hello": "echo date",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
-    "type": "module",
     "url": "git+ssh://git@github.com/Langstone/backend-project-lvl1.git"
   },
   "author": "",

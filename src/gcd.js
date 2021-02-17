@@ -1,4 +1,4 @@
-const readlineSync = require('readline-sync');
+import { question } from 'readline-sync';
 
 function gcdGame(userName) {
   const numbers = [5, 10, 15, 25, 50, 100];
@@ -10,7 +10,7 @@ function gcdGame(userName) {
     if (!y) return x;
     return NOD(y, x % y);
   }
-  const questionResult = readlineSync.question(`Question: ${number1} ${number2} `, {
+  const questionResult = question(`Question: ${number1} ${number2} `, {
     trueValue: [NOD(number1, number2)],
   });
   let result;
@@ -23,4 +23,4 @@ function gcdGame(userName) {
   console.log(`'${questionResult}' is wrong answer ;(. Correct answer was '${NOD(number1, number2)}'. Let's try again, ${userName}!)`);
   return false;
 }
-module.exports = gcdGame;
+export default gcdGame;

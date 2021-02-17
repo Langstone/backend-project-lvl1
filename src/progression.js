@@ -1,4 +1,4 @@
-const readlineSync = require('readline-sync');
+import { question } from 'readline-sync';
 
 function progressionGame(userName) {
   const numRandom = Math.floor(Math.random() * 10);
@@ -29,7 +29,7 @@ function progressionGame(userName) {
   myArray.splice(changeItem, 1, '..');
   const myNewArray = myArray.join(' ');
 
-  const questionResult = readlineSync.question(`Question: ${myNewArray} `, {
+  const questionResult = question(`Question: ${myNewArray} `, {
     trueValue: [randomItem],
   });
   let result;
@@ -44,4 +44,4 @@ function progressionGame(userName) {
   console.log(`Let's try again, ${userName}!`);
   return false;
 }
-module.exports = progressionGame;
+export default progressionGame;

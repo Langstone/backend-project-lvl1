@@ -1,4 +1,4 @@
-const readlineSync = require('readline-sync');
+import { question } from 'readline-sync';
 // Wait for user's response.
 // eslint-disable-next-line consistent-return
 function calcGame(userName) {
@@ -26,7 +26,7 @@ function calcGame(userName) {
       trueResult = numRandom1 / numRandom2;
       break;
   }
-  const questionResult = readlineSync.question(`Question: ${numRandom1} ${randomKey} ${numRandom2} `, {
+  const questionResult = question(`Question: ${numRandom1} ${randomKey} ${numRandom2} `, {
     trueValue: [trueResult],
   });
   let result;
@@ -38,4 +38,4 @@ function calcGame(userName) {
   }
   console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was '${trueResult}'. Let's try again, ${userName}!`);
 }
-module.exports = calcGame;
+export default calcGame;
