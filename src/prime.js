@@ -18,10 +18,12 @@ function primeGame(userName) {
   });
   if (questionResult === true) {
     console.log(`Your answer ${trueAnswer(numRandom)}`);
-    console.log('Correct!');
+    console.log(`Let's try again, ${userName})!`);
     return true;
   }
-  console.log(`Let's try again, ${userName})!`);
+  console.log(`Your answer ${questionResult}`);
+  console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was ${trueAnswer(numRandom)})`);
+  console.log(`Let's try again, ${userName}!`);
   return false;
 }
 

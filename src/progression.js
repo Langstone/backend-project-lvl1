@@ -39,7 +39,9 @@ function progressionGame(userName) {
     console.log('Correct!');
     return true;
   }
-  console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was '${randomItem}'. Let's try again, ${userName})`);
+  console.log(`Your answer: ${questionResult}`);
+  console.log(`'${questionResult}' is wrong answer ;-(. Correct answer was '${randomItem}'.`);
+  console.log(`Let's try again, ${userName}`);
   return false;
 }
 module.exports = progressionGame;
